@@ -44,6 +44,10 @@
   <ItemGroup>
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos Simples e Tipos de Valor\TiposDeValor.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos Simples e Tipos de Valor\TiposSimples.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\2 - Tipos Inteiros\Inteiros.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\3 - Tipos de Ponto Flutuante\PontoFlututante.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\4 - Decimal\Decimal.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\5 - Booleanos\Booleanos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,10 +55,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\2 - Tipos Inteiros\" />
-    <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\3 - Tipos de Ponto Flutuante\" />
-    <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\4 - Decimal\" />
-    <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\5 - Booleanos\" />
     <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\6 - Estruturas Definidas pelo Usuário\" />
     <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\7 - Enums\" />
     <Folder Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\" />
