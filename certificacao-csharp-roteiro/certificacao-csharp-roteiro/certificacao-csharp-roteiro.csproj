@@ -48,6 +48,8 @@
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\3 - Tipos de Ponto Flutuante\PontoFlututante.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\4 - Decimal\Decimal.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\5 - Booleanos\Booleanos.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\6 - Estruturas Definidas pelo Usuário\Estruturas.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\7 - Enums\Enumeracoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,8 +57,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\6 - Estruturas Definidas pelo Usuário\" />
-    <Folder Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\7 - Enums\" />
     <Folder Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\" />
     <Folder Include="Aula3 - classes, métodos, métodos de extensão, parâmetros opcionais e nomeados e propriedades indexadas\" />
     <Folder Include="Aula4 - criar métodos sobrecarregados e substituídos\" />
