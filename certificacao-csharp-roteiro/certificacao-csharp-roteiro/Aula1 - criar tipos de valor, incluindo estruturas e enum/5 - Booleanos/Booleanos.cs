@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace certificacao_csharp_roteiro.Aula1___criar_tipos_de_valor__incluindo_estruturas_e_enum._5___Booleanos
+namespace certificacao_csharp_roteiro
 {
     class Booleanos
     {

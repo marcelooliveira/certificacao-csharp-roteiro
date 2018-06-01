@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace certificacao_csharp_roteiro.Aula1___criar_tipos_de_valor__incluindo_estruturas_e_enum._6___Estruturas_Definidas_pelo_Usuário
+namespace certificacao_csharp_roteiro
 {
     class Estruturas
     {

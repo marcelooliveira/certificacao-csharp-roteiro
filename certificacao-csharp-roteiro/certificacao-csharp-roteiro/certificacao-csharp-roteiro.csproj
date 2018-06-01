@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos Simples e Tipos de Valor\TiposDeReferencia.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos Simples e Tipos de Valor\TiposDeValor.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos Simples e Tipos de Valor\TiposSimples.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\2 - Tipos Inteiros\Inteiros.cs" />
