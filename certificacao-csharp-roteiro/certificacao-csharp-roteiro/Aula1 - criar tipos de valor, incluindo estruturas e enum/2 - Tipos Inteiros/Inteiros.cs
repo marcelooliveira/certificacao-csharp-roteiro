@@ -65,6 +65,9 @@ namespace certificacao_csharp_roteiro
             //uint estoque = -2300; // System.UInt32 
             //Error CS0031  Constant value '-2300' cannot be converted to a 'uint'
 
+            //long populacaoDoBrasil = 207_660_929.345;
+            //Error CS0266  Cannot implicitly convert type 'double' to 'long'.
+
+        }
     }
-}
 }

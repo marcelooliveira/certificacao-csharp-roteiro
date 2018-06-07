@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class PontoFlututante
+    class PontoFlututante : IAulaItem
     {
         //Type      Approximate range        Precision
         //===============================================
@@ -15,6 +15,19 @@ namespace certificacao_csharp_roteiro
 
         public PontoFlututante()
         {
+        }
+
+        public void Executar()
+        {
+            double massaDaTerra = 5.9736e24; // System.Double
+            float numeroPI = 3.14159f; // System.Single
+
+            Console.WriteLine($"massaDaTerra: {massaDaTerra}");
+            Console.WriteLine($"numeroPI: {numeroPI}");
+
+            Console.WriteLine();
+            Console.WriteLine("Operação com int, float e short");
+
             int x = 3;
             float y = 4.5f;
             short z = 5;
