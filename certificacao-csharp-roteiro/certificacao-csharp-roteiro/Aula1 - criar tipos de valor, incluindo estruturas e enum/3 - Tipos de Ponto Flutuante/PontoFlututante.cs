@@ -12,5 +12,16 @@ namespace certificacao_csharp_roteiro
         //===============================================
         //float	    ±1.5e−45 to ±3.4e38	7    digits
         //double	±5.0e−324 to ±1.7e308	 15-16 digits
+
+        public PontoFlututante()
+        {
+            int x = 3;
+            float y = 4.5f;
+            short z = 5;
+            var resultado = x * y / z;
+            Console.WriteLine("O resultado é {0}", resultado);
+            Type type = resultado.GetType();
+            Console.WriteLine("O resultado é do tipo: {0}", type.ToString());
+        }
     }
 }

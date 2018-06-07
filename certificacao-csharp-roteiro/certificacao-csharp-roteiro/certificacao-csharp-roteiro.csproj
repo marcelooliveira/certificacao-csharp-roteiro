@@ -43,7 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\1 - Tipos de Referência\TiposDeReferencia.cs" />
-    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos Simples e Tipos de Valor\TiposDeValor.cs" />
+    <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\1 - Tipos de Valor\TiposDeValor.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\2 - Tipos Inteiros\Inteiros.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\3 - Tipos de Ponto Flutuante\PontoFlututante.cs" />
     <Compile Include="Aula1 - criar tipos de valor, incluindo estruturas e enum\4 - Decimal\Decimal.cs" />
@@ -75,6 +75,7 @@
     <Compile Include="Aula8 - garantir a interoperabilidade com código que acesse APIs COM\2 - Interoperabilidade C++\InteroperabilidadeCPlusPlus.cs" />
     <Compile Include="Aula8 - garantir a interoperabilidade com código que acesse APIs COM\3 - Expondo componentes COM ao CSharp\ExpondoComponentesCOM.cs" />
     <Compile Include="Aula8 - garantir a interoperabilidade com código que acesse APIs COM\4 - Expondo o CSharp para o COM\ExpondoCSharp.cs" />
+    <Compile Include="IAulaItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
