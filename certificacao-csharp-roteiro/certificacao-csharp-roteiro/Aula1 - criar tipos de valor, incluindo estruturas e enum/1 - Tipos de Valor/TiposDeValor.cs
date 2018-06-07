@@ -10,43 +10,45 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            byte nivelDeAzul = 0xFF; // == System.Byte 
             char resposta = 'S';// System.Char
+
+            byte nivelDeAzul = 0xFF; // == System.Byte 
             int populacao = 1500; // System.Int32 
             short passageirosVoo = 230; // System.Int16 
             long populacaoDoBrasil = 207_660_929; // System.Int64 
-            bool fumante = false; // System.Boolean booleano
 
             sbyte nivelDeBrilho = 127; // System.Sbyte 
-            uint varUint = 1500; // System.UInt32 
+            uint estoque = 1500; // System.UInt32 
             ushort passageirosNavio = 230; // System.UInt16 
             ulong populacaoDoMundo = 7_000_000_000; // System.UInt64 
+
+            bool fumante = false; // System.Boolean booleano
             decimal salario = 5000m; // System.Decimal 
             double massaDaTerra = 5.9736e24; // System.Double
             float numeroPI = 3.14159f; // System.Single
 
-            DiaDaSemana quarta = (DiaDaSemana)2;
+            DiaDaSemana quarta = (DiaDaSemana)2; //Quarta-feira (struct)
 
-            Posicao posicao = new Posicao(13.4, 35.8);
+            Posicao posicao = new Posicao(13.4, 35.8); //Latitude, Longitude (enumeração)
 
-            Console.WriteLine(nivelDeAzul);
-            Console.WriteLine(resposta);
-            Console.WriteLine(populacao);
-            Console.WriteLine(passageirosVoo);
-            Console.WriteLine(populacaoDoBrasil);
-            Console.WriteLine(fumante);
+            Console.WriteLine($"nivelDeAzul: {nivelDeAzul}");
+            Console.WriteLine($"resposta: {resposta}");
+            Console.WriteLine($"populacao: {populacao}");
+            Console.WriteLine($"passageirosVoo: {passageirosVoo}");
+            Console.WriteLine($"populacaoDoBrasil: {populacaoDoBrasil}");
+            Console.WriteLine($"fumante: {fumante}");
 
-            Console.WriteLine(nivelDeBrilho);
-            Console.WriteLine(varUint);
-            Console.WriteLine(passageirosNavio);
-            Console.WriteLine(populacaoDoMundo);
-            Console.WriteLine(salario);
-            Console.WriteLine(massaDaTerra);
-            Console.WriteLine(numeroPI);
+            Console.WriteLine($"nivelDeBrilho: {nivelDeBrilho}");
+            Console.WriteLine($"estoque: {estoque}");
+            Console.WriteLine($"passageirosNavio: {passageirosNavio}");
+            Console.WriteLine($"populacaoDoMundo: {populacaoDoMundo}");
+            Console.WriteLine($"salario: {salario}");
+            Console.WriteLine($"massaDaTerra: {massaDaTerra}");
+            Console.WriteLine($"numeroPI: {numeroPI}");
 
-            Console.WriteLine(quarta);
+            Console.WriteLine($"quarta: {quarta}");
 
-            Console.WriteLine(posicao);
+            Console.WriteLine($"posicao: {posicao}");
         }
     }
 
