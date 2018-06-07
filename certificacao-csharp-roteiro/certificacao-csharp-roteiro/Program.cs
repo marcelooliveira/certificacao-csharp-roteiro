@@ -40,9 +40,10 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine();
             string titulo = $"EXECUTANDO: {menuItem.Titulo}";
             Console.WriteLine(titulo);
-            Console.WriteLine(new string('=', menuItem.Titulo.Length));
+            Console.WriteLine(new string('=', titulo.Length));
 
             itemSelecionado.Executar();
+            Console.WriteLine();
             Console.WriteLine("Tecle algo para continuar...");
             return itemSelecionado;
         }
@@ -63,7 +64,8 @@ namespace certificacao_csharp_roteiro
         {
             return new List<MenuItem>
             {
-                new MenuItem("Tipos de Valor", typeof(TiposDeValor))
+                new MenuItem("Tipos de Valor", typeof(TiposDeValor)),
+                new MenuItem("Tipos Inteiros", typeof(TiposInteiros))
             };
         }
     }

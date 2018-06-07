@@ -10,6 +10,10 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
+            //int numeroDeAlunos;
+            //Console.WriteLine(numeroDeAlunos);
+            ////Error CS0165  Use of unassigned local variable 'numeroDeAlunos'
+
             char resposta = 'S';// System.Char
 
             byte nivelDeAzul = 0xFF; // == System.Byte 
