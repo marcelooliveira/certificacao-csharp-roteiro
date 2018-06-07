@@ -56,7 +56,7 @@ namespace certificacao_csharp_roteiro
         }
     }
 
-    enum DiaDaSemana { SEG, TER, QUA, QUI, SEX, SAB };
+    enum DiaSemana { SEG, TER, QUA, QUI, SEX, SAB };
 
     struct Posicao
     {
