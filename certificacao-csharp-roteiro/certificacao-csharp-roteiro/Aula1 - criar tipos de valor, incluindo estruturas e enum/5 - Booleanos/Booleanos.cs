@@ -6,52 +6,34 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class Booleanos
+    class Booleanos : IAulaItem
     {
-        //The bool keyword is an alias of System.Boolean.It is used to declare variables to store the Boolean values, true and false.
+        public void Executar()
+        {
+            //bool possuiSaldo = 1;
+            //Error CS0029  Cannot implicitly convert type 'int' to 'bool'
 
+            bool possuiSaldo = true;
 
-        //Note
+            // WriteLine() automaticamente converte o valor de "possuiSaldo" para texto.
+            Console.WriteLine(possuiSaldo);
 
-        //If you require a Boolean variable that can also have a value of null, use bool?. For more information, see Nullable Types.
+            int dias = DateTime.Now.Day;
+            Console.WriteLine($"dias: {dias}");
 
-        //Literals
-        //You can assign a Boolean value to a bool variable. You can also assign an expression that evaluates to bool to a bool variable.
+            // Atribui a diasPar o valor de uma expressão booleana.
+            bool diasPar = (dias % 2 == 0);
 
-
-        //C#
-
-        //Copy
-        //public class BoolTest
-        //{
-        //    static void Main()
-        //    {
-        //        bool b = true;
-
-        //        // WriteLine automatically converts the value of b to text.
-        //        Console.WriteLine(b);
-
-        //        int days = DateTime.Now.DayOfYear;
-
-
-        //        // Assign the result of a boolean expression to b.
-        //        b = (days % 2 == 0);
-
-        //        // Branch depending on whether b is true or false.
-        //        if (b)
-        //        {
-        //            Console.WriteLine("days is an even number");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("days is an odd number");
-        //        }
-        //    }
-        //}
-        ///* Output:
-        //    True
-        //    days is an <even/odd> number
-        //*/
-        //The default value of a bool variable is false. The default value of a bool? variable is null.
-    }
+            // Executa um braço da condição, dependendo se diasPar for verdadeiro ou falso
+            //if (diasPar == true)
+            if (diasPar)
+                {
+                Console.WriteLine("dias é um número par");
+            }
+            else
+            {
+                Console.WriteLine("dias é um número ímpar");
+            }
+        }
+}
 }
