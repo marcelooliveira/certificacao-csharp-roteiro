@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class Decimal
+    class Decimal : IAulaItem
     {
         //The decimal keyword indicates a 128-bit data type.Compared to other floating-point types, the decimal type has more precision and a smaller range, which makes it appropriate for financial and monetary calculations.The approximate range and precision for the decimal type are shown in the following table.
 
@@ -40,5 +40,16 @@ namespace certificacao_csharp_roteiro
         //double x = (double)myMoney;  
         //myMoney = (decimal)x;  
         //You can also mix decimal and numeric integral types in the same expression.However, mixing decimal and other floating-point types without a cast causes a compilation error.
+        public void Executar()
+        {
+            Console.WriteLine("Descobrindo se (0.1 + 0.2) == 0.3");
+            Console.WriteLine((0.1 + 0.2) == 0.3);
+
+            Console.WriteLine("Descobrindo se (0.1 + 0.2) == 0.30000000000000004");
+            Console.WriteLine((0.1 + 0.2) == 0.30000000000000004);
+
+            Console.WriteLine("Descobrindo se (0.1m + 0.2m) == 0.3m");
+            Console.WriteLine((0.1m + 0.2m) == 0.3m);
+        }
     }
 }
