@@ -70,7 +70,8 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Decimal", typeof(Decimal)),
                 new MenuItem("Booleanos", typeof(Booleanos)),
                 new MenuItem("Estruturas", typeof(Estruturas)),
-                new MenuItem("Enumeracoes", typeof(Enumeracoes))                
+                new MenuItem("Enumeracoes", typeof(Enumeracoes)),
+                new MenuItem("Tipos de Refêrencia", typeof(TiposDeReferencia))
             };
         }
     }

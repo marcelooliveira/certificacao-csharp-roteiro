@@ -6,33 +6,54 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class TiposDeReferencia
+    class TiposDeReferencia : IAulaItem
     {
-        //Tipos de referência(Referência de C#)
+        public void Executar()
+        {
+            int idade = 42;
+            int copiaIdade = idade;
 
-        //Há dois tipos em C#: tipos de referência e valor. 
-        //Variáveis de tipos de referência armazenam referências em seus dados (objetos) enquanto que 
-        //variáveis de tipos de valor contém diretamente seus dados. 
-        //Com tipos de referência, duas variáveis podem fazer referência ao mesmo objeto; portanto, 
-        //operações em uma variável podem afetar o objeto referenciado pela outra variável. 
-        //Com tipos de valor, cada variável tem sua própria cópia dos dados e as operações em uma variável 
-        //não podem afetar a outra (exceto no caso das variáveis de parâmetros in, ref e out. 
-        //Confira o modificador de parâmetro in, ref e out).
+            Console.WriteLine("int idade = 42;");
+            Console.WriteLine("int copiaIdade = idade;");
+            Console.WriteLine($"idade: {idade}");
+            Console.WriteLine($"copiaIdade: {copiaIdade}");
 
-        //As seguintes palavras-chaves são usadas para declarar tipos de referência:
+            idade = 32;
 
-        //class
+            Console.WriteLine();
+            Console.WriteLine("idade = 32;");
+            Console.WriteLine($"idade: {idade}");
+            Console.WriteLine($"copiaIdade: {copiaIdade}");
 
-        //interface
+            var cliente1 = new Cliente("José da Silva", 42);
+            var cliente2 = cliente1;
+            Console.WriteLine(@"var cliente1 = new Cliente(""José da Silva"", 42);");
+            Console.WriteLine("var cliente2 = cliente1;");
+            Console.WriteLine($"cliente1: {cliente1}");
+            Console.WriteLine($"cliente2: {cliente2}");
 
-        //delegate
+            cliente1.Nome = "Maria de Souza";
 
-        //O C# também oferece os seguintes tipos de referência internos:
+            Console.WriteLine(@"cliente1.Nome = ""Maria de Souza"";");
+            Console.WriteLine($"cliente1: {cliente1}");
+            Console.WriteLine($"cliente2: {cliente2}");
+        }
+    }
 
-        //dynamic
+    class Cliente
+    {
+        public Cliente(string nome, int idade)
+        {
+            Nome = nome;
+            Idade = idade;
+        }
 
-        //object
+        public string Nome { get; set; }
+        public int Idade { get; set; }
 
-        //string
+        public override string ToString()
+        {
+            return $"Nome: {Nome}, Idade: {Idade}";
+        }
     }
 }
