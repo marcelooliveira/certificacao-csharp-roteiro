@@ -6,77 +6,111 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class Delegates
+    class Delegates : IAulaItem
     {
-        //delegate (Referência de C#)
-        //20/07/2015
-        //2 minutos para ler
-        //Colaboradores
-        //dotnet bot  olprod OpenLocalizationService
-        //A declaração de um tipo de delegado é semelhante a uma assinatura de método. Ela tem um valor retornado e parâmetros de qualquer tipo:
+        //A declaração de um tipo de delegado é semelhante a uma assinatura de método.
+        //Ela tem um valor retornado e parâmetros de qualquer tipo:
 
-        //C#
-
-        //Copiar
         //public delegate void TestDelegate(string message);
         //public delegate int TestDelegate(MyType m, long num);
-        //Um delegate é um tipo de referência que pode ser usado para encapsular um método nomeado ou anônimo. Representantes são semelhantes a ponteiros de função em C++. No entanto, os representantes são fortemente tipados e seguros.Para aplicativos de representantes, consulte Representantes e Representantes genéricos.
 
-        //Comentários
+        //Um delegate é um tipo de referência que pode ser usado para encapsular um método nomeado 
+        //ou anônimo. Representantes são semelhantes a ponteiros de função em C++. 
+        //No entanto, os representantes são fortemente tipados e seguros.
+        //Para aplicativos de representantes, consulte Representantes e Representantes genéricos.
+
         //Os representantes são a base dos Eventos.
 
 
-        //Um delegado pode ser instanciado associando-o a um método nomeado ou anônimo.Para obter mais informações, consulte Métodos anônimos e Métodos nomeados.
+        //Um delegado pode ser instanciado associando-o a um método nomeado ou anônimo.
+        //Para obter mais informações, consulte Métodos anônimos e Métodos nomeados.
 
 
-        //O delegado deve ser instanciado com um método ou expressão lambda que tenha um tipo de retorno compatível e parâmetros de entrada. Para obter mais informações sobre o grau de variação permitido na assinatura do método, consulte Variação em representantes. Para uso com métodos anônimos, o delegado e o código a ser associado a ele são declarados juntos.As duas formas de instanciar representantes são discutidas nesta seção.
+        //O delegado deve ser instanciado com um método ou expressão lambda que tenha um tipo de retorno
+        //compatível e parâmetros de entrada. Para obter mais informações sobre o grau de variação 
+        //permitido na assinatura do método, consulte Variação em representantes. 
+        //Para uso com métodos anônimos, o delegado e o código a ser associado a ele são declarados juntos.
+        //As duas formas de instanciar representantes são discutidas nesta seção.
 
+        public void Executar()
+        {
+            Calculadora.Executar();
+        }
+    }
 
-        //Exemplo
-        //C#
+    //class Calculadora
+    //{
+    //    static double Duplicar(double input) { return input * 2; }
+    //    static double Triplicar(double input) { return input * 3; }
 
-        //Copiar
-        //// Declare delegate -- defines required signature:
-        //delegate double MathAction(double num);
+    //    public static void Executar()
+    //    {
+    //        //Executa diretamente o método
+    //        Console.WriteLine($"Duplicar(7.5): {Duplicar(7.5)}");
 
-        //class DelegateTest
-        //{
-        //    // Regular method that matches signature:
-        //    static double Double(double input)
-        //    {
-        //        return input * 2;
-        //    }
+    //        //Executa diretamente o método
+    //        Console.WriteLine($"Triplicar(7.5): {Triplicar(7.5)}");
+    //    }
+    //}
 
-        //    static void Main()
-        //    {
-        //        // Instantiate delegate with named method:
-        //        MathAction ma = Double;
+    // Declara o delegado e define a assinatura exigida
+    delegate double OperacaoMatematica(double num);
 
-        //        // Invoke delegate ma:
-        //        double multByTwo = ma(4.5);
-        //        Console.WriteLine("multByTwo: {0}", multByTwo);
+    //class Calculadora
+    //{
+    //    static double Duplicar(double input) { return input * 2; }
+    //    static double Triplicar(double input) { return input * 3; }
 
-        //        // Instantiate delegate with anonymous method:
-        //        MathAction ma2 = delegate (double input)
-        //        {
-        //            return input * input;
-        //        };
+    //    public static void Executar()
+    //    {
+    //        //Executa diretamente o método
+    //        Console.WriteLine($"Duplicar(7.5): {Duplicar(7.5)}");
 
-        //        double square = ma2(5);
-        //        Console.WriteLine("square: {0}", square);
+    //        //Executa diretamente o método
+    //        Console.WriteLine($"Triplicar(7.5): {Triplicar(7.5)}");
 
-        //        // Instantiate delegate with lambda expression
-        //        MathAction ma3 = s => s * s * s;
-        //        double cube = ma3(4.375);
+    //        OperacaoMatematica metodoMultiplicacao = Duplicar;
+    //        Console.WriteLine($"Duplicar(7.5): {metodoMultiplicacao(7.5)}");
+    //        metodoMultiplicacao = Triplicar;
+    //        Console.WriteLine($"Triplicar(7.5): {metodoMultiplicacao(7.5)}");
+    //    }
+    //}
 
-        //        Console.WriteLine("cube: {0}", cube);
-        //    }
-        //    // Output:
-        //    // multByTwo: 9
-        //    // square: 25
-        //    // cube: 83.740234375
-        //}
-        //Especificação da Linguagem C#
-        //Para obter mais informações, consulte a Especificação da linguagem C#. A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+    class Calculadora
+    {
+        static double Duplicar(double input) { return input * 2; }
+        static double Triplicar(double input) { return input * 3; }
+
+        public static void Executar()
+        {
+            //Executa diretamente o método
+            Console.WriteLine($"Duplicar(7.5): {Duplicar(7.5)}");
+
+            //Executa diretamente o método
+            Console.WriteLine($"Triplicar(7.5): {Triplicar(7.5)}");
+
+            //invoca o delegado
+            OperacaoMatematica metodoMultiplicacao = Duplicar;
+            Console.WriteLine($"Duplicar(7.5): {metodoMultiplicacao(7.5)}");
+
+            //troca a referência
+            metodoMultiplicacao = Triplicar;
+            Console.WriteLine($"Triplicar(7.5): {metodoMultiplicacao(7.5)}");
+
+            // instancia um delegado com um método anônimo
+            OperacaoMatematica metodoQuadrado = delegate (double input)
+            {
+                return input * input;
+            };
+
+            double quadrado = metodoQuadrado(5);
+            Console.WriteLine("quadrado: {0}", quadrado);
+
+            // intancia um delegado com uma expressão lambda
+            OperacaoMatematica metodoCubo = s => s * s * s;
+            double cubo = metodoCubo(4.375);
+
+            Console.WriteLine("cubo: {0}", cubo);
+        }
     }
 }
