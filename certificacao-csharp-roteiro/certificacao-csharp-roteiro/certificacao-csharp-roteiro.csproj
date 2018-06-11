@@ -53,7 +53,7 @@
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\2 - Classes\Classes.cs" />
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\3 - Interfaces\Interfaces.cs" />
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\4 - Delegates\Delegates.cs" />
-    <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\5 - Dynamic\Dynamic.cs" />
+    <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\5 - Dynamic\Dinamicos.cs" />
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\6 - Objetos\Objetos.cs" />
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\7 - Strings\Strings.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Métodos de Extensão\MetodosDeExtensao.cs" />
