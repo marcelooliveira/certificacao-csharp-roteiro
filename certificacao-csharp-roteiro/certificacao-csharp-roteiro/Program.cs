@@ -76,7 +76,8 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Interfaces", typeof(Interfaces)),
                 new MenuItem("Delegates", typeof(Delegates)),               
                 new MenuItem("Dinâmicos", typeof(Dinamicos)),
-                new MenuItem("Objetos", typeof(Objetos))
+                new MenuItem("Objetos", typeof(Objetos)),
+                new MenuItem("Strings", typeof(Strings))
             };
         }
     }
