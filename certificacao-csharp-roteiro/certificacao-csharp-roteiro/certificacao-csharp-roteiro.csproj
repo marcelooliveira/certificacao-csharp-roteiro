@@ -63,6 +63,7 @@
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\4 - Métodos de Extensão\MetodosDeExtensao.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Parametros Opcionais\ParametrosNomeados.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\5 - Propriedades Indexadas\PropriedadesIndexadas.cs" />
+    <Compile Include="Aula4 - criar métodos sobrecarregados e substituídos\1 - Métodos Sobrecarregados\Sobrecargas.cs" />
     <Compile Include="Aula4 - criar métodos sobrecarregados e substituídos\2 - Métodos Substituídos\Override.cs" />
     <Compile Include="Aula5 - box ou unbox para converter entre tipos de valor\1 - Boxing\Boxing.cs" />
     <Compile Include="Aula5 - box ou unbox para converter entre tipos de valor\2 - Unboxing\Unboxing.cs" />
@@ -88,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Aula3 - classes, métodos, métodos de extensão\1 - Classes\" />
-    <Folder Include="Aula4 - criar métodos sobrecarregados e substituídos\1 - Métodos Sobrecarregados\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

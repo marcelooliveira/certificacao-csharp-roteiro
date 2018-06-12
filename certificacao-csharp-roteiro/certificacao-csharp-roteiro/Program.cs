@@ -81,7 +81,9 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Metodos", typeof(Metodos)),
                 new MenuItem("Parâmetros Nomeados", typeof(ParametrosNomeados)),
                 new MenuItem("Parâmetros Opcionais", typeof(ParametrosOpcionais)),
-                new MenuItem("Métodos de Extensão", typeof(MetodosDeExtensao))
+                new MenuItem("Métodos de Extensão", typeof(MetodosDeExtensao)),
+                new MenuItem("Sobrecargas", typeof(Sobrecargas)),
+                new MenuItem("Métodos Substituidos", typeof(MetodosSubstituidos))
             };
         }
     }
