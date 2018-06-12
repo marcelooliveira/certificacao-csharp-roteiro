@@ -8,11 +8,23 @@ namespace certificacao_csharp_roteiro
 {
     class MetodosDeExtensao
     {
-        //Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo derivado, recompilar ou, caso contrário, modificar o tipo original.Os métodos de extensão são um tipo especial de método estático, mas são chamados como se fossem métodos de instância no tipo estendido.No caso do código cliente gravado em C#, F# e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos realmente definidos em um tipo.
+        //Os métodos de extensão permitem que você "adicione" tipos existentes sem criar um novo tipo 
+        //derivado, recompilar ou, caso contrário, modificar o tipo original.Os métodos de extensão são 
+        //um tipo especial de método estático, mas são chamados como se fossem métodos de instância 
+        //no tipo estendido.No caso do código cliente gravado em C#, F# e Visual Basic, não há nenhuma diferença aparente entre chamar um método de extensão e os métodos realmente definidos em um tipo.
 
-        //Os métodos de extensão mais comuns são os operadores de consulta padrão LINQ que adicionam funcionalidade de consulta aos tipos System.Collections.IEnumerable e System.Collections.Generic.IEnumerable<T> existentes. Para usar os operadores de consulta padrão, traga-os primeiro ao escopo com uma diretiva using System.Linq. Em seguida, qualquer tipo que implemente IEnumerable<T> parece ter métodos de instância como GroupBy, OrderBy, Average e assim por diante.Você pode exibir esses métodos adicionais no preenchimento de declaração do IntelliSense ao digitar "ponto" após uma instância de um tipo IEnumerable<T> como List<T> ou Array.
+        //Os métodos de extensão mais comuns são os operadores de consulta padrão LINQ que adicionam 
+        //funcionalidade de consulta aos tipos System.Collections.IEnumerable e System.Collections.Generic.
+        //IEnumerable<T> existentes. Para usar os operadores de consulta padrão, traga-os primeiro ao 
+        //escopo com uma diretiva using System.Linq. Em seguida, qualquer tipo que implemente 
+        //IEnumerable<T> parece ter métodos de instância como GroupBy, OrderBy, Average e assim por diante.
+        //Você pode exibir esses métodos adicionais no preenchimento de declaração do IntelliSense ao digitar 
+        //"ponto" após uma instância de um tipo IEnumerable<T> como List<T> ou Array.
 
-        //O exemplo a seguir mostra como chamar o método de consulta padrão OrderBy em qualquer matriz de inteiros. A expressão entre parênteses é uma expressão lambda. Vários operadores de consulta padrão obtêm expressões lambda como parâmetros, mas isso não é um requisito para métodos de extensão. Para obter mais informações, consulte Expressões Lambda.
+        //O exemplo a seguir mostra como chamar o método de consulta padrão OrderBy em qualquer matriz 
+        //de inteiros. A expressão entre parênteses é uma expressão lambda. Vários operadores de consulta 
+        //padrão obtêm expressões lambda como parâmetros, mas isso não é um requisito para métodos de 
+        //extensão. Para obter mais informações, consulte Expressões Lambda.
 
         //C#
 
@@ -31,9 +43,13 @@ namespace certificacao_csharp_roteiro
         //}
         //}
         ////Output: 10 15 21 26 39 45
-        //Os métodos de extensão são definidos como estáticos, mas são chamados usando a sintaxe do método de instância.Seu primeiro parâmetro especifica em que tipo o método opera e o parâmetro é precedido pelo modificador this. Os métodos de extensão só estarão no escopo quando você importar explicitamente o namespace para seu código-fonte com uma diretiva using.
+        //Os métodos de extensão são definidos como estáticos, mas são chamados usando a sintaxe do método 
+        //de instância.Seu primeiro parâmetro especifica em que tipo o método opera e o parâmetro é precedido 
+        //pelo modificador this. Os métodos de extensão só estarão no escopo quando você importar 
+        //explicitamente o namespace para seu código-fonte com uma diretiva using.
 
-        //O exemplo a seguir mostra um método de extensão definido para a classe System.String.Observe que isso é definido em uma classe estática não aninhada e não genérica:
+        //O exemplo a seguir mostra um método de extensão definido para a classe System.String.Observe que 
+        //isso é definido em uma classe estática não aninhada e não genérica:
 
         //C#
 
@@ -62,33 +78,59 @@ namespace certificacao_csharp_roteiro
         //Copiar
         //string s = "Hello Extension Methods";
         //int i = s.WordCount();
-        //Em seu código, você chama o método de extensão com sintaxe de método de instância.No entanto, a linguagem intermediária (IL) gerada pelo compilador converte seu código em uma chamada no método estático.Portanto, o princípio de encapsulamento ainda não está realmente sendo violado. De fato, os métodos de extensão não podem acessar variáveis particulares no tipo que estão estendendo.
+        //Em seu código, você chama o método de extensão com sintaxe de método de instância.No entanto, 
+        //a linguagem intermediária (IL) gerada pelo compilador converte seu código em uma chamada no método 
+        //estático.Portanto, o princípio de encapsulamento ainda não está realmente sendo violado. De fato, 
+        //os métodos de extensão não podem acessar variáveis particulares no tipo que estão estendendo.
 
 
-        //Para obter mais informações, consulte Como implementar e chamar um método de extensão personalizado.
+        //Para obter mais informações, consulte Como implementar e chamar um método de extensão 
+        //personalizado.
 
 
-        //Em geral, provavelmente você chamará métodos de extensão com muito mais frequência do que implementará os seus próprios.Como os métodos de extensão são chamados com a sintaxe do método de instância, nenhum conhecimento especial é necessário para usá-los no código do cliente.Para habilitar métodos de extensão para um tipo específico, apenas adicione uma diretiva using para o namespace no qual os métodos estão definidos.Por exemplo, para usar os operadores de consulta padrão, adicione esta diretiva using ao seu código:
+        //Em geral, provavelmente você chamará métodos de extensão com muito mais frequência do que 
+        //implementará os seus próprios.Como os métodos de extensão são chamados com a sintaxe do método 
+        //de instância, nenhum conhecimento especial é necessário para usá-los no código do cliente.
+        //Para habilitar métodos de extensão para um tipo específico, apenas adicione uma diretiva using
+        //para o namespace no qual os métodos estão definidos.Por exemplo, para usar os operadores de consulta
+        //padrão, adicione esta diretiva using ao seu código:
 
         //C#
 
         //Copiar
         //using System.Linq;  
-        //(Também pode ser necessário adicionar uma referência a System.Core.dll.) Você observará que os operadores de consulta padrão agora são exibidos no IntelliSense como métodos adicionais disponíveis para a maioria dos tipos IEnumerable<T>.
+        //(Também pode ser necessário adicionar uma referência a System.Core.dll.) Você observará que os 
+        //operadores de consulta padrão agora são exibidos no IntelliSense como métodos adicionais disponíveis
+        //para a maioria dos tipos IEnumerable<T>.
 
         //Observação
 
-        //Embora os operadores de consulta padrão não sejam exibidos no IntelliSense para String, eles ainda estarão disponíveis.
+        //Embora os operadores de consulta padrão não sejam exibidos no IntelliSense para String, eles 
+        //ainda estarão disponíveis.
 
         //Associando Métodos de Extensão no Momento da Compilação
-        //Você pode usar métodos de extensão para estender uma classe ou interface, mas não os substituir.Um método de extensão com o mesmo nome e assinatura que um método de interface ou classe nunca será chamado.No tempo de compilação, os métodos de extensão sempre têm menos prioridade que os métodos de instância definidos no próprio tipo.Em outras palavras, se um tipo possuir um método chamado Process(int i) e se você tiver um método de extensão com a mesma assinatura, o compilador sempre se associará ao método de instância.Quando o compilador encontra uma invocação de método, primeiro ele procura uma correspondência nos métodos de instância do tipo.Se nenhuma correspondência for encontrada, ele irá procurar todos os métodos de extensão definidos para o tipo e associará o primeiro método de extensão que encontrar.O exemplo a seguir demonstra como o compilador determina a qual método de extensão ou método de instância associar.
+        //Você pode usar métodos de extensão para estender uma classe ou interface, mas não os substituir.
+        //Um método de extensão com o mesmo nome e assinatura que um método de interface ou classe nunca será 
+        //chamado.No tempo de compilação, os métodos de extensão sempre têm menos prioridade que os métodos 
+        //de instância definidos no próprio tipo.Em outras palavras, se um tipo possuir um método chamado 
+        //Process(int i) e se você tiver um método de extensão com a mesma assinatura, o compilador 
+        //sempre se associará ao método de instância.Quando o compilador encontra uma invocação de método,
+        //primeiro ele procura uma correspondência nos métodos de instância do tipo.Se nenhuma 
+        //correspondência for encontrada, ele irá procurar todos os métodos de extensão definidos para o 
+        //tipo e associará o primeiro método de extensão que encontrar.O exemplo a seguir demonstra como 
+        //o compilador determina a qual método de extensão ou método de instância associar.
 
         //Exemplo
-        //O exemplo a seguir demonstra as regras que o compilador C# segue ao determinar se deve associar uma chamada de método a um método de instância no tipo ou a um método de extensão. A classe estática Extensions contém métodos de extensão definidos para qualquer tipo que implementa IMyInterface. As classes A, B e C implementam a interface.
+        //O exemplo a seguir demonstra as regras que o compilador C# segue ao determinar se deve associar 
+        //uma chamada de método a um método de instância no tipo ou a um método de extensão. A classe 
+        //estática Extensions contém métodos de extensão definidos para qualquer tipo que implementa 
+        //IMyInterface. As classes A, B e C implementam a interface.
 
-        //O método de extensão MethodB nunca é chamado porque seu nome e assinatura são exatamente iguais aos métodos já implementados pelas classes.
+        //O método de extensão MethodB nunca é chamado porque seu nome e assinatura são exatamente iguais 
+        //aos métodos já implementados pelas classes.
 
-        //Quando o compilador não consegue localizar um método de instância com uma assinatura compatível, ele se associa a um método de extensão correspondente se houver.
+        //Quando o compilador não consegue localizar um método de instância com uma assinatura compatível, 
+        //ele se associa a um método de extensão correspondente se houver.
 
         //C#
 
