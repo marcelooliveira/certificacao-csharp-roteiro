@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class ParametrosOpcionais : IAulaItem
+    class ParametrosNomeados : IAulaItem
     {
         public void Executar()
         {

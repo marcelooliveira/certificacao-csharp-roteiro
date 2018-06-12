@@ -59,8 +59,9 @@
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\6 - Objetos\Objetos.cs" />
     <Compile Include="Aula2 - criar tipos de referência, tipos genéricos, construtores, variáveis ​​estáticas\7 - Strings\Strings.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\2 - Metodos\Metodos.cs" />
+    <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Parametros Opcionais\ParametrosOpcionais.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\4 - Métodos de Extensão\MetodosDeExtensao.cs" />
-    <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Parametros Opcionais\Argumentos.cs" />
+    <Compile Include="Aula3 - classes, métodos, métodos de extensão\3 - Parametros Opcionais\ParametrosNomeados.cs" />
     <Compile Include="Aula3 - classes, métodos, métodos de extensão\5 - Propriedades Indexadas\PropriedadesIndexadas.cs" />
     <Compile Include="Aula4 - criar métodos sobrecarregados e substituídos\2 - Métodos Substituídos\Override.cs" />
     <Compile Include="Aula5 - box ou unbox para converter entre tipos de valor\1 - Boxing\Boxing.cs" />
