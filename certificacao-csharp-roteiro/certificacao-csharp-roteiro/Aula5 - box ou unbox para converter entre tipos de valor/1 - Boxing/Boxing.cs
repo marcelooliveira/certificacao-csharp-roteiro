@@ -127,6 +127,8 @@ namespace certificacao_csharp_roteiro
             //O valor do tipo de valor = 456
             //O valor do tipo de referência = 123
             //*/
+
+            TesteBoxing testeBoxing = new TesteBoxing();
         }
     }
 

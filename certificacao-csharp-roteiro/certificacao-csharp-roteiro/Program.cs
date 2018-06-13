@@ -84,7 +84,10 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Métodos de Extensão", typeof(MetodosDeExtensao)),
                 new MenuItem("Sobrecargas", typeof(Sobrecargas)),
                 new MenuItem("Métodos Substituidos", typeof(MetodosSubstituidos)),
-                new MenuItem("Boxing", typeof(Boxing))                
+                new MenuItem("Boxing", typeof(Boxing)),                
+                new MenuItem("Unboxing", typeof(Unboxing)),
+                new MenuItem("Conversoes Implícitas", typeof(ConversoesImplicitas)),
+                new MenuItem("Conversoes Explícitas", typeof(ConversoesExplicitas))                
             };
         }
     }

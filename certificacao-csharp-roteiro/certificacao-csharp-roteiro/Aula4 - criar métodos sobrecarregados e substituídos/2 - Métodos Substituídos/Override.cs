@@ -60,4 +60,9 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine("Gato.Andar");
         }
     }
+
+    class Cachorro : Animal
+    {
+
+    }
 }
