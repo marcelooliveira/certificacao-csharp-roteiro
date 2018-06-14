@@ -87,7 +87,9 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Boxing", typeof(Boxing)),                
                 new MenuItem("Unboxing", typeof(Unboxing)),
                 new MenuItem("Conversoes Implícitas", typeof(ConversoesImplicitas)),
-                new MenuItem("Conversoes Explícitas", typeof(ConversoesExplicitas))                
+                new MenuItem("Conversoes Explícitas", typeof(ConversoesExplicitas)),
+                new MenuItem("Operadores de Conversão", typeof(OperadoresDeConversao)),                
+                new MenuItem("Parse", typeof(Parse))
             };
         }
     }

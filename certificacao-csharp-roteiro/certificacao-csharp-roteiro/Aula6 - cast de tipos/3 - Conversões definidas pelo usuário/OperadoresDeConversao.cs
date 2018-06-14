@@ -6,45 +6,103 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro
 {
-    class OperadoresDeConversao
+    class OperadoresDeConversao : IAulaItem
     {
-        //O C# habilita os programadores a declarar conversões em classes ou structs, para que tais classes ou structs possam ser convertidas para e/ou de outras classes ou structs ou tipos básicos. As conversões são definidas como operadores e nomeadas para o tipo para o qual são convertidas. O tipo do argumento a ser convertido ou o tipo do resultado da conversão, mas não ambos, deve ser o tipo recipiente.
+        public void Executar()
+        {
+            //Este exemplo define dois structs, AnguloEmRadianos e AnguloEmGraus, e demonstra conversões entre eles.
 
-        //C#
+            //AnguloEmRadianos radianos;
+            //AnguloEmGraus graus;
 
-        //Copiar
-        //class SampleClass
-        //{
-        //    public static explicit operator SampleClass(int i)
-        //    {
-        //        SampleClass temp = new SampleClass();
-        //        // code to convert from int to SampleClass...
 
-        //        return temp;
-        //    }
-        //}
-        //Visão Geral dos Operadores de Conversão
-        //Os operadores de conversão têm as seguintes propriedades:
+            //AnguloEmGraus anguloEmGraus = new AnguloEmGraus(45);
+            //Console.WriteLine(anguloEmGraus);
 
-        //Conversões declaradas como implicit ocorrem automaticamente quando for necessário.
+            //AnguloEmRadianos anguloEmRadianos = new AnguloEmRadianos(15);
+            //Console.WriteLine(anguloEmRadianos);
 
-        //Conversões declaradas como explicit exigem que uma conversão seja chamada.
+            AnguloEmGraus anguloEmGraus = 45;
+            Console.WriteLine(anguloEmGraus);
 
-        //Todas as conversões devem ser declaradas como static.
+            AnguloEmRadianos anguloEmRadianos = 15;
+            Console.WriteLine(anguloEmRadianos);
 
-        //Seções relacionadas
-        //Para saber mais:
+            int graus = (int)anguloEmGraus;
 
-        //Usando operadores de conversão
-
-        //Transmissões e conversões de tipo
-
-        //Como implementar conversões definidas pelo usuário entre structs
-
-        //explicit
-
-        //implicit
-
-        //static
+            anguloEmRadianos = (AnguloEmRadianos)anguloEmGraus;
+            anguloEmGraus = (AnguloEmGraus)anguloEmRadianos;
+            System.Console.WriteLine($"anguloEmGraus: {anguloEmGraus}");
+            System.Console.WriteLine($"anguloEmRadianos: {anguloEmRadianos}");
+        }
     }
 }
+
+public struct AnguloEmRadianos
+{
+    public double Radianos { get; }
+
+    public AnguloEmRadianos(double radianos)
+    {
+        this.Radianos = radianos;
+    }
+
+    public static explicit operator AnguloEmRadianos(AnguloEmGraus graus)
+    {
+        return new AnguloEmRadianos(graus.Graus * System.Math.PI / 180);
+    }
+
+    public static implicit operator AnguloEmRadianos(double radianos)
+    {
+        return new AnguloEmRadianos(radianos);
+    }
+
+    public static implicit operator double(AnguloEmRadianos radianos)
+    {
+        return radianos.Radianos;
+    }
+
+    public static implicit operator int(AnguloEmRadianos radianos)
+    {
+        return (int)radianos.Radianos; //cuidado com a perda na conversão!
+    }
+
+    public override string ToString()
+    {
+        return String.Format("{0} radianos", this.Radianos);
+    }
+}
+
+
+public struct AnguloEmGraus
+{
+    public double Graus { get; }
+
+    public AnguloEmGraus(double graus) { this.Graus = graus; }
+
+    public static explicit operator AnguloEmGraus(AnguloEmRadianos radianos)
+    {
+        return new AnguloEmGraus(radianos.Radianos * 180 / System.Math.PI);
+    }
+
+    public static implicit operator AnguloEmGraus(double graus)
+    {
+        return new AnguloEmGraus(graus);
+    }
+
+    public static implicit operator double(AnguloEmGraus graus)
+    {
+        return graus.Graus;
+    }
+
+    public static implicit operator int(AnguloEmGraus graus)
+    {
+        return (int)graus.Graus;  //cuidado com a perda na conversão!
+    }
+
+    public override string ToString()
+    {
+        return String.Format("{0} graus", this.Graus);
+    }
+}
+
