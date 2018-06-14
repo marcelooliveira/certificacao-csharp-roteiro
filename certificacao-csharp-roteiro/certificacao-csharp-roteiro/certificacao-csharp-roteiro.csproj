@@ -71,7 +71,7 @@
     <Compile Include="Aula6 - cast de tipos\2 - Conversões explícitas\ConversoesExplicitas.cs" />
     <Compile Include="Aula6 - cast de tipos\3 - Conversões definidas pelo usuário\OperadoresDeConversao.cs" />
     <Compile Include="Aula6 - cast de tipos\4 - Conversões com classes auxiliares\Parse.cs" />
-    <Compile Include="Aula7 - lidar com tipos dinâmicos\1 - Usando o tipo dynamic\TipoDynamic.cs" />
+    <Compile Include="Aula7 - lidar com tipos dinâmicos\1 - Usando o tipo dynamic\UsandoDynamic.cs" />
     <Compile Include="Aula7 - lidar com tipos dinâmicos\2 - Conversões entre dynamic e outros\ConversoesDeDynamic.cs" />
     <Compile Include="Aula7 - lidar com tipos dinâmicos\3 - Resolução de sobrecarga\ResolucaoSobrecarga.cs" />
     <Compile Include="Aula7 - lidar com tipos dinâmicos\4 - Dynamic Language Runtime\DLR.cs" />

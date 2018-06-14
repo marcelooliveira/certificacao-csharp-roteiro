@@ -8,33 +8,32 @@ namespace certificacao_csharp_roteiro
 {
     class Delegates : IAulaItem
     {
-        //A declaração de um tipo de delegado é semelhante a uma assinatura de método.
-        //Ela tem um valor retornado e parâmetros de qualquer tipo:
-
-        //public delegate void TestDelegate(string message);
-        //public delegate int TestDelegate(MyType m, long num);
-
-        //Um delegate é um tipo de referência que pode ser usado para encapsular um método nomeado 
-        //ou anônimo. Representantes são semelhantes a ponteiros de função em C++. 
-        //No entanto, os representantes são fortemente tipados e seguros.
-        //Para aplicativos de representantes, consulte Representantes e Representantes genéricos.
-
-        //Os representantes são a base dos Eventos.
-
-
-        //Um delegado pode ser instanciado associando-o a um método nomeado ou anônimo.
-        //Para obter mais informações, consulte Métodos anônimos e Métodos nomeados.
-
-
-        //O delegado deve ser instanciado com um método ou expressão lambda que tenha um tipo de retorno
-        //compatível e parâmetros de entrada. Para obter mais informações sobre o grau de variação 
-        //permitido na assinatura do método, consulte Variação em representantes. 
-        //Para uso com métodos anônimos, o delegado e o código a ser associado a ele são declarados juntos.
-        //As duas formas de instanciar representantes são discutidas nesta seção.
-
         public void Executar()
         {
-            Calculadora.Executar();
+            //A declaração de um tipo de delegado é semelhante a uma assinatura de método.
+            //Ela tem um valor retornado e parâmetros de qualquer tipo:
+
+            //public delegate void TestDelegate(string message);
+            //public delegate int TestDelegate(MyType m, long num);
+
+            //Um delegate é um tipo de referência que pode ser usado para encapsular um método nomeado 
+            //ou anônimo. Representantes são semelhantes a ponteiros de função em C++. 
+            //No entanto, os representantes são fortemente tipados e seguros.
+            //Para aplicativos de representantes, consulte Representantes e Representantes genéricos.
+
+            //Os representantes são a base dos Eventos.
+
+
+            //Um delegado pode ser instanciado associando-o a um método nomeado ou anônimo.
+            //Para obter mais informações, consulte Métodos anônimos e Métodos nomeados.
+
+
+            //O delegado deve ser instanciado com um método ou expressão lambda que tenha um tipo de retorno
+            //compatível e parâmetros de entrada. Para obter mais informações sobre o grau de variação 
+            //permitido na assinatura do método, consulte Variação em representantes. 
+            //Para uso com métodos anônimos, o delegado e o código a ser associado a ele são declarados juntos.
+            //As duas formas de instanciar representantes são discutidas nesta seção.
+
         }
     }
 

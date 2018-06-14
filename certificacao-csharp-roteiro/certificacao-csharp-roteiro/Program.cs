@@ -89,7 +89,8 @@ namespace certificacao_csharp_roteiro
                 new MenuItem("Conversoes Implícitas", typeof(ConversoesImplicitas)),
                 new MenuItem("Conversoes Explícitas", typeof(ConversoesExplicitas)),
                 new MenuItem("Operadores de Conversão", typeof(OperadoresDeConversao)),                
-                new MenuItem("Parse", typeof(Parse))
+                new MenuItem("Parse", typeof(Parse)),
+                new MenuItem("UsandoDynamic", typeof(UsandoDynamic))
             };
         }
     }
