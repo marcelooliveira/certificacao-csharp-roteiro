@@ -10,41 +10,65 @@ namespace certificacao_csharp_roteiro
     {
         public void Executar()
         {
-            string[] valores =
-                {
-                    "+13230",
-                    "-0",
-                    "1,390,146",
-                    "$190,235,421,127",
-                    "0xFA1B",
-                    "163042",
-                    "-10",
-                    "007",
-                    "2147483647",
-                    "2147483648",
-                    "16e07",
-                    "134985.0",
-                    "-12034",
-                    "-2147483648",
-                    "-2147483649"
-                };
+            string textoDigitado = "123";
 
-            foreach (string valor in valores)
+            //int numeroConvertido = "123";
+
+            int numeroConvertido = int.Parse(textoDigitado);
+            Console.WriteLine($"numeroConvertido: {numeroConvertido}");
+
+            //textoDigitado = "abc";
+            //numeroConvertido = int.Parse(textoDigitado);
+            //Console.WriteLine($"numeroConvertido: {numeroConvertido}");
+            
+            textoDigitado = "abc";
+            int.TryParse(textoDigitado, out numeroConvertido);
+            Console.WriteLine($"numeroConvertido: {numeroConvertido}");
+
+            if (int.TryParse(textoDigitado, out numeroConvertido))
             {
-                try
-                {
-                    int numero = Int32.Parse(valor);
-                    Console.WriteLine("{0} --> {1}", valor, numero);
-                }
-                catch (FormatException)
-                {
-                    Console.WriteLine("{0}: Formato inválido", valor);
-                }
-                catch (OverflowException)
-                {
-                    Console.WriteLine("{0}: Overflow", valor);
-                }
+                Console.WriteLine($"numeroConvertido: {numeroConvertido}");
             }
+            else
+            {
+                Console.WriteLine($"Texto '{textoDigitado}' não pode ser convertido para int");
+            }
+
+            //textoDigitado = "123,45";
+            //if (decimal.TryParse(textoDigitado, out decimal valorConvertido))
+            //{
+            //    Console.WriteLine($"valorConvertido: {valorConvertido}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Texto '{textoDigitado}' não pode ser convertido para decimal");
+            //}
+
+            //textoDigitado = "R$ 123,45";
+            //if (decimal.TryParse(textoDigitado, out decimal valorConvertido))
+            //{
+            //    Console.WriteLine($"valorConvertido: {valorConvertido}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Texto '{textoDigitado}' não pode ser convertido para decimal");
+            //}
+            ////Texto 'R$ 123,45' não pode ser convertido para decimal
+
+
+            textoDigitado = "R$ 123,45";
+            if (decimal.TryParse(textoDigitado, System.Globalization.NumberStyles.Currency,
+                System.Globalization.CultureInfo.CurrentCulture,
+                out decimal valorConvertido))
+            {
+                Console.WriteLine($"valorConvertido: {valorConvertido}");
+            }
+            else
+            {
+                Console.WriteLine($"Texto '{textoDigitado}' não pode ser convertido para decimal");
+            }
+            //Texto 'R$ 123,45' não pode ser convertido para decimal
+
         }
     }
 }
