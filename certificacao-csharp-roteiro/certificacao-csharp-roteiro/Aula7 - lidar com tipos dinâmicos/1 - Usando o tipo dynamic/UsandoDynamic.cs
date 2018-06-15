@@ -27,31 +27,29 @@ namespace certificacao_csharp_roteiro
             // execução e causa uma exceção de tempo de execução.
 
             AppCalculadora calculadora = new AppCalculadora();
-            // The following call to Somar causes a compiler error 
-            // if Somar has only one parameter. Uncomment the line
-            // to see the error.
+            // A seguinte chamada ao método Somar() causa um erro
+            // de compilação, pois Somar() possui apenas um parâmetro.
+            // Remova o comentário para ver o erro.
             //calculadora.Somar(10, 4);
 
             dynamic dynamic_calculadora = new AppCalculadora();
-            // The following line is not identified as an error by the
-            // compiler, but it causes a run-time exception.
+            // A linha a seguir não é identificada como erro pelo
+            // compilador, mas causa um erro de tempo de execução.
             dynamic_calculadora.Somar(10, 4);
 
-            // The following calls also do not cause compiler errors, whether 
-            // appropriate methods exist or not.
+            // As chamadas abaixo também não causam erros de compilação,
+            // não importa se os métodos existam ou não
             dynamic_calculadora.someMethod("some argument", 7, null);
             dynamic_calculadora.nonexistentMethod();
 
-
-
-
+            
 
 
 
             dynamic d = 1;
-            var testSum = d + 3;
-            // Rest the mouse pointer over testSum in the following statement.
-            Console.WriteLine(testSum);
+            var somaTeste = d + 3;
+            // Deixe o mouse sobre o argumento somaTeste na próxima instrução.
+            Console.WriteLine(somaTeste);
 
 
 
@@ -61,18 +59,18 @@ namespace certificacao_csharp_roteiro
 
     class AppCalculadora
     {
-        private decimal valor;
+        public decimal Valor { get; private set; }
 
         public AppCalculadora() { }
         public AppCalculadora(decimal valorInicial)
         {
-            this.valor = valorInicial;
+            this.Valor = valorInicial;
         }
 
         public void Somar(decimal parcela)
-            { this.valor += parcela; }
+            { this.Valor += parcela; }
 
         public void Subtrair(decimal minuendo)
-            { this.valor -= minuendo; }
+            { this.Valor -= minuendo; }
     }
 }
