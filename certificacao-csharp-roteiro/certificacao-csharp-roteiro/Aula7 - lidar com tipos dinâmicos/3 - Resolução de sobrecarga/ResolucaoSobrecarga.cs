@@ -24,7 +24,7 @@ namespace certificacao_csharp_roteiro
             //calculadora.Subtrair(stringDinamica);
             //Console.WriteLine($"calculadora.Valor: {calculadora.Valor}");
 
-            // A seguinte instrução não causa erro de compilação.
+            // A seguinte instrução CAUSA erro de compilação.
             //calculadora.Subtrair("xpto");
         }
     }
